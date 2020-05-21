@@ -1,0 +1,35 @@
+@mixin wrapper($n) {
+    padding-left: calc(100% / 32 * #{$n});
+    padding-right: calc(100% / 32 * #{$n});
+}
+
+@mixin row() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin col($n) {
+    width: calc(100% / 32 * #{$n});
+}
+
+@mixin unlist {
+    list-style: none;
+}
+
+@mixin break-mobile {
+    @media only screen and (min-width: 768px) {
+        @content;
+      }
+}
+
+@mixin break-tablet {
+    @media only screen and (min-width: 992px) {
+        @content;
+      }
+}
+
+@mixin break-desktop {
+    @media only screen and (min-width: 1650px) {
+        @content;
+      }
+}
